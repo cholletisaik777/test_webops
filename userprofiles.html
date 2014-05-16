@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html>
+<link href="https://netdna.bootstrapcdn.com/bootstrap/3.1.1/css/bootstrap.css" rel="stylesheet">
+<style>
+#UN{
+ position:absolute;width:150px;height:50px;top:20px;left:570px;top:200px;
+}
+#P{
+position:absolute;width:150px;height:50px;top:80px;left:570px;top:270px;
+}
+#but{
+	position:absolute;width:150px;height:50px;top:80px;left:570px;top:350px;
+}
+#head{
+	position:absolute;top:15px;color:white;z-index:20;left:400px;
+}
+#un{
+	position:absolute;left:540px;top:250px;
+}
+#p{
+    position:absolute;left:540px;top:320px;
+}
+#div1{
+	position:absolute;width:1300px;height:100px;left:0px;top:0px;background-color:blue;
+}
+#img{
+	position:absolute;left:620px;top:140px;width:50px;height:50px;
+}
+#div2{
+	position:absolute;width:300px;height:300px;left:490px;top:130px;background-color:#E6E6B8;z-index:-2;
+}
+</style>
+<div id='div2'></div>
+<center><font face="comic sans ms"><h1 id='head'>USERPROFILE LOGIN PAGE</h1></center></font>
+<div id='div1'></div>
+ <form role="form" id='form1' action='' method='get'>
+<div class="form-group">
+<br><input class="form-control" type='text' id='UN' name='username' placeholder='username' required>
+ <span style='color:red' id='un'></span><br>
+ <br><input class="form-control" type='password' id='P' name='password' placeholder='password' required>
+   <span style='color:red' id='p'></span><br>
+ <br>
+ <a id='link'><button class='btn btn-primary' id='but' type='button' onclick='validate()'>submit</button></a><br>
+ </form>
+ <img id='img' src='/home/saikiran/Pictures/iitm.jpg'></img>
+</body>
+ </html>
+ <script>
+ var c=0;
+ function validate(){
+ if(document.getElementById('UN').value==''){
+ document.getElementById('un').innerHTML="you have not given your username";
+ document.getElementById('un').style.color='red';
+ document.getElementById('UN').style.border='2px solid red';
+ c++;
+}
+else {
+document.getElementById('un').innerHTML="";
+ document.getElementById('un').style.color='';
+ document.getElementById('UN').style.border='';
+}
+if(document.getElementById('P').value==''){
+ document.getElementById('p').innerHTML="you have not given your password";
+ document.getElementById('p').style.color='red';
+ document.getElementById('P').style.border='2px solid red';
+ c++;
+}
+else {
+document.getElementById('p').innerHTML="";
+ document.getElementById('p').style.color='';
+ document.getElementById('P').style.border='';
+}
+if(c==0){
+	document.getElementById('link').href='index.html';
+}
+}
+
+ </script>
